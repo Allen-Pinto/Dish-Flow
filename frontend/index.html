@@ -4,13 +4,28 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DishFlow - Restaurant Management</title>
+    
+    <!-- Preload critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>Dish Management Dashboard</title>
+    
+    <!-- Add CSP meta tag for security -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div id="root">
+      <!-- Loading fallback -->
+      <div style="display: flex; justify-content: center; align-items: center; height: 100vh; background: #f8fafc;">
+        <div style="text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🍽️</div>
+          <h2 style="color: #1e293b; margin-bottom: 0.5rem;">Loading DishFlow...</h2>
+          <p style="color: #64748b;">Please wait while we load your restaurant dashboard</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Remove type="module" from script tag -->
+    <script src="/src/main.jsx"></script>
   </body>
 </html>

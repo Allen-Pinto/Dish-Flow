@@ -6,17 +6,25 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false,
+    // Add these settings for proper module loading
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          utils: ['axios']
-        }
+        format: 'es',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
       }
     }
   },
   server: {
     port: 5173
   },
-  base: './'
+  // Remove base: './' or set it to empty
+  base: '',
+  // Enable this for better chunking
+  esbuild: {
+    supported: {
+      'top-level-await': true
+    }
+  }
 })
