@@ -162,7 +162,7 @@ export const COMMON_ALLERGENS = [
 export const API_CONFIG = {
   TIMEOUT: 15000,
   RETRY_ATTEMPTS: 3,
-  BASE_URL: import.meta.env.VITE_API_URL || 'http://localhost:5001/api',
+  BASE_URL: import.meta.env.VITE_API_URL || 'https://dish-flow.onrender.com/api',
 };
 
 // Local Storage Keys
