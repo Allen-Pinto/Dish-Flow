@@ -5,26 +5,23 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
-    sourcemap: false,
-    // Add these settings for proper module loading
+    sourcemap: true, 
     rollupOptions: {
       output: {
-        format: 'es',
+        format: 'es', 
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]'
       }
     }
   },
   server: {
-    port: 5173
+    port: 5173,
+    host: true, 
+    open: true, 
+    cors: true, 
   },
-  // Remove base: './' or set it to empty
   base: '',
-  // Enable this for better chunking
-  esbuild: {
-    supported: {
-      'top-level-await': true
-    }
+  optimizeDeps: {
+    include: ['react', 'react-dom']
   }
 })
