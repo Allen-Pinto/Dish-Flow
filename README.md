@@ -33,17 +33,12 @@
 - [Troubleshooting](#-troubleshooting)
 - [Contributing](#-contributing)
 - [License](#-license)
-- [Contact](#-contact)
 
 ---
 
 ## 🎯 Overview
 
 The **Dish Management Dashboard** is a modern, full-stack web application designed for restaurants to efficiently manage their menu items. Built with React, Node.js, Express, and MongoDB, it features a clean, intuitive interface with real-time synchronization across all connected clients using WebSocket technology.
-
-### 🎥 Demo
-
-> **Live Demo:** [Add your deployed link here]
 
 **Key Highlights:**
 - ⚡ Real-time dish updates across multiple clients
